@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Manrope } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
 import { site, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en-NZ" className={manrope.variable}>
       <body className={manrope.className}>{children}</body>
+      <Analytics />
     </html>
   );
 }
